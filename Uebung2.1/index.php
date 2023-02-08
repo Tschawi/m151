@@ -16,7 +16,7 @@ mysqli_select_db($conn, $database);
 
 echo "Datenbank ausgewählt!<br />";
 
-$sql = "SELECT * FROM customers";
+$sql = "SELECT * FROM customers WHERE job_title = 'Purchasing Representative'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -24,6 +24,8 @@ if ($result->num_rows > 0) {
 } else {
   echo "Keine Resultate vorhanden";
 }
+var_dump($result);
+
 
 ?>
 
