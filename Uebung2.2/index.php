@@ -19,6 +19,6 @@ echo "<br>Datenausgabe<br><br>";
 $statement = $conn->prepare("SELECT * FROM customers");
 $statement->execute();
 while($row = $statement->fetch()) {
-    echo $row['first_name']." ".$row['last_name']."<br />";
+    echo $row['first_name']." ".$row['last_name']." <a href='bestellungen.php?id={$row['id']}'>Bestellungen</a><br />";
 }
 ?>
