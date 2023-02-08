@@ -24,7 +24,10 @@ if ($result->num_rows > 0) {
 } else {
   echo "Keine Resultate vorhanden";
 }
+
+echo "<pre>";
 var_dump($result);
+echo"</pre>";
 
 
 ?>
